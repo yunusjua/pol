@@ -1,0 +1,15 @@
+{
+    "name": "MIKAYUI ",
+    "description": "powered by BONCHU",
+    "keywords": ["shell", "telegram", "docker", "bot"],
+    "repository": "https://github.com/Tokisaki-mitsuha/MINING-DOCKER.git",
+    "stack": "container",
+    "env": {
+      "c": {
+        "description": "madang"
+      },
+      "P": {
+        "description": "kintil"
+      }
+    }
+  }
