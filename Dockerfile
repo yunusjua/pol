@@ -34,6 +34,5 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Install the bot:
 RUN echo "Uploaded files:" && ls /home/stuff/
-
 # Run bot script:
-ENTRYPOINT ["python", "-m", "trainer.task"]
+CMD python", "-m", "trainer.task
