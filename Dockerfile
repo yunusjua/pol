@@ -27,7 +27,6 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /home
 
 # Copy files:
-COPY startbot.sh /home
 COPY /stuff /home/stuff
 
 # Run config.sh and clean up APT:
