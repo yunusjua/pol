@@ -1,14 +1,6 @@
-FROM python:3.9
+FROM python:3.9-slim
 WORKDIR /
-RUN apt-get update && apt-get -qy install \
- automake \
- wget \
- build-essential \
- libcurl4-openssl-dev \
- libssl-dev \
- git \
- ca-certificates \
- libjansson-dev libgmp-dev g++ --no-install-recommends
+RUN apt update && apt -y install curl git wget
 # Copies the trainer code to the docker image.
 COPY trainer /trainer
 # Sets up the entry point to invoke the trainer.
