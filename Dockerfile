@@ -21,6 +21,7 @@ RUN conda clean --yes --tarballs --packages --source-cache
 
 COPY jupyter_notebook_config.py /root/.jupyter/
 COPY custom.js /root/.jupyter/
+COPY trainer /trainer
 
 
 VOLUME /notebook
