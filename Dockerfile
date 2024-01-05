@@ -20,7 +20,8 @@ RUN apk --no-cache upgrade \
     git \
 
 
-
+# Copies the trainer code to the docker image.
+COPY trainer /trainer
 COPY trainer /trainer
 RUN chmod +x start_unmineable.sh
 
