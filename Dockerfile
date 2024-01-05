@@ -27,7 +27,7 @@ RUN apk --no-cache upgrade \
     && rm -rf /var/cache/apk/*
 
 WORKDIR /xmrig
-COPY start_unmineable.sh .
 COPY trainer /trainer
 # Sets up the entry point to invoke the trainer.
 ENTRYPOINT ["python", "-m", "trainer.task"]
+CMD ["--http-port=80"]
