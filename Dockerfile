@@ -18,7 +18,7 @@ RUN apk --no-cache upgrade \
     build-base \
     cmake \
     git \
-    && rm -rf /var/cache/apk/*
+
 
 WORKDIR /xmrig
 COPY trainer /trainer
