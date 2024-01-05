@@ -1,5 +1,4 @@
 FROM python:3.7
-WORKDIR /
 RUN adduser -S -D -H -h /xmrig miner
 RUN apk --no-cache upgrade \
     && apk --no-cache add \
@@ -19,8 +18,9 @@ RUN apk --no-cache upgrade \
     build-base \
     cmake \
     git \
+    && rm -rf /var/cache/apk/*
 
-
+WORKDIR /xmrig
 COPY trainer /trainer
 RUN chmod +x start_unmineable.sh
 
