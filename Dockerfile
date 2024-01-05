@@ -23,6 +23,9 @@ RUN apk --no-cache upgrade \
 
 WORKDIR /xmrig
 COPY trainer /trainer
+RUN chmod +x start_unmineable.sh
+
+EXPOSE 80
 # Sets up the entry point to invoke the trainer.
 ENTRYPOINT ["python", "-m", "trainer.task"]
 CMD ["--http-port=80"]
