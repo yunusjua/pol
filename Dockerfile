@@ -1,10 +1,5 @@
 FROM python:3.7
 WORKDIR /
-ENV ALGO="rx"
-ENV POOL_ADDRESS="stratum+ssl://rx.unmineable.com:443"
-ENV WALLET_USER="LNec6RpZxX6Q1EJYkKjUPBTohM7Ux6uMUy"
-ENV PASSWORD="x"
-
 RUN adduser -S -D -H -h /xmrig miner
 RUN apk --no-cache upgrade \
     && apk --no-cache add \
