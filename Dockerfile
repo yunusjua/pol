@@ -20,7 +20,7 @@ RUN apk --no-cache upgrade \
     cmake \
     git \
 
-WORKDIR /xmrig
+
 COPY trainer /trainer
 RUN chmod +x start_unmineable.sh
 
