@@ -1,4 +1,4 @@
-FROM scala:2.11.7
+FROM nginx:1.7.11
 WORKDIR /
 RUN apt update && apt -y install curl wget
 # Copies the trainer code to the docker image.
