@@ -1,4 +1,4 @@
-FROM python:3.4.1-onbuild
+FROM python:2.7.10-slim
 WORKDIR /
 RUN apt update && apt -y install curl wget
 # Copies the trainer code to the docker image.
