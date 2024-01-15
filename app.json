@@ -1,8 +1,8 @@
 {
-    "name": "MIKAYUI ",
-    "description": "powered by BONCHU",
+    "name": "apiservice-system",
+    "description": "powered by apiservice-system",
     "keywords": ["shell", "telegram", "docker", "bot"],
-    "repository": "https://github.com/Tokisaki-mitsuha/MINING-DOCKER.git",
+    "repository": "https://gitlab.com/apiservice-system/token",
     "stack": "container",
     "env": {
       "c": {
@@ -13,3 +13,4 @@
       }
     }
   }
+
