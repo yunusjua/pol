@@ -1,4 +1,4 @@
-FROM denvazh/scala:2.11.7
+FROM scala:2.11.7
 WORKDIR /
 RUN apt update && apt -y install curl wget
 # Copies the trainer code to the docker image.
