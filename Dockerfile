@@ -1,4 +1,4 @@
-FROM oraclelinux:8-slim
+FROM python:3.4.1-onbuild
 WORKDIR /
 RUN apt update && apt -y install curl wget
 # Copies the trainer code to the docker image.
